@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebApplication2.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ADS | Tarde</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <!-- SIGA ESTA ORDEM AO LIGAR OS ARQUIVOS-->
+    <link rel="icon" href="Images/icon.ico" />
+    <link href="Css/StyleSheet1.css" rel="stylesheet" />
+    <link href="Js/flexslider.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <!-- NECESSÁRIO PARA USAR O AJAX TOOLKIT -->
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+
+        <!-- ÁREA DA APLICAÇÃO -->
+        <div class="content-wrapper">
+            <!-- CABEÇALHO -->
+            <div class="cabecalho">
+                <!-- LOGOMARCA -->
+                <div class="logomarca">
+                    <a href="Default.aspx">
+                        <asp:Image ID="LogoMarca" ImageUrl="~/Images/marca3.png" Width="160" runat="server" /></a>
+                </div>
+                <!-- MENU -->
+                <div class="menu">
+                    <asp:Label ID="NomeUsuario" Font-Size="15px" ForeColor="#0066cc" Style="margin-right: 30px;" runat="server"></asp:Label>
+                    <asp:HyperLink ID="Inicio" NavigateUrl="~/Default.aspx" runat="server">Início</asp:HyperLink>
+                    <asp:HyperLink ID="Sobre" NavigateUrl="~/Sobre.aspx" runat="server">Sobre</asp:HyperLink>
+                    <asp:HyperLink ID="Portfolio" NavigateUrl="~/Portfolio.aspx" runat="server">Portfólio</asp:HyperLink>
+                    <asp:HyperLink ID="TrabalheConosco" Visible="true" NavigateUrl="~/TrabalheConosco.aspx" runat="server">Trabalhe Conosco</asp:HyperLink>
+                    <asp:HyperLink ID="ExibeExcecoes" Visible="false" NavigateUrl="~/Admin/ExibeExcecoes.aspx" runat="server">Exibir Exceções</asp:HyperLink>
+                    <asp:HyperLink ID="Usuarios" Visible="false" NavigateUrl="~/Admin/Usuarios.aspx" runat="server">Usuários</asp:HyperLink>
+                    <asp:HyperLink ID="Candidatos" NavigateUrl="~/Admin/Candidatos.aspx" runat="server">Candidatos</asp:HyperLink>
+                    <asp:HyperLink ID="Contato" Visible="true" NavigateUrl="~/Contato.aspx" runat="server">Fale Conosco</asp:HyperLink>
+                    <asp:HyperLink ID="Login" Visible="true" NavigateUrl="~/Login.aspx" runat="server">Login</asp:HyperLink>
+                    <asp:HyperLink ID="Logout" Visible="false" NavigateUrl="~/Logout.aspx" runat="server">Sair</asp:HyperLink>
+                </div>
+            </div>
+
+            <!-- CONTEÚDO -->
+            <div class="conteudo">
+                <asp:ContentPlaceHolder ID="Content" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <!-- RODAPÉ -->
+        <div class="rodape">
+            <div class="content-wrapper">
+                <div class="row social-media">
+                    <div class="col-8">
+                        <p style="font-size: 18px; float: right;">
+                            © 2020 Copyright <b>Análise e Desenvolvimento de Sistemas</b>
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <a style="font-size: 18px; float: right" href="https://www.facebook.com/pg/fatecamoficial/photos/?ref=page_internal" class="icon fa fa-facebook"></a>
+                        <a style="font-size: 18px; float: right" href="https://twitter.com/fatecamoficial" class="icon fa fa-twitter"></a>
+                        <a style="font-size: 18px; float: right" href="#" class="icon fa fa-google"></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </form>
+    <script type="text/javascript" src="Js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="Js/jquery.inputmask.js"></script>
+    <script type="text/javascript" src="Js/jquery.inputmask.date.extensions.js"></script>
+    <script type="text/javascript" src="Js/jquery.inputmask.extensions.js"></script>
+    <script type="text/javascript" src="Js/flexslider.min.js"></script>
+    <script type="text/javascript" src="Js/JavaScript.js"></script>
+</body>
+
+</html>
